@@ -1,7 +1,7 @@
 <li class="media mb-3 border-bottom pb-3">
   <div class="text-center mr-3">
   <%= image_tag question.user.avatar.url, class: 'mr-3 rounded-circle',size: '50x50' %>
-  <p><%= link_to question.user.name, edit_profile_path, class: 'small' %></p>
+  <p><%= link_to question.user.name, profile_path, class: 'small' %></p>
   </div>
   <div class="media-body">
     <div class="d-flex">
