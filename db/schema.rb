@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_30_124014) do
+ActiveRecord::Schema.define(version: 2023_08_31_101337) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2023_08_30_124014) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "profile"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
