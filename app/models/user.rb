@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :answers, dependent: :destroy
   scope :related_to_question, ->(question) { joins(:answers).where(answers: { question_id: question.id }) }
 
+  mount_uploader :avatar, AvatarUploader
   def mine?(object)
     object.user_id == id
   end
