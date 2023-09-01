@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+      @answer = Answer.find(params[:id])
+      @question = Question.find(params[:id])
+      @user = User.find( @question.user_id) || User.find( @answer.user_id)
+  end
+
   private
 
   def user_params
